@@ -1,0 +1,2 @@
+# docker_drupal_mysql_phpmyadmin
+ DrupalとMysqlとPHPMyAdminの雛形です。
