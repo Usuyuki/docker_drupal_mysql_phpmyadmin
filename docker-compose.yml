@@ -22,7 +22,7 @@ services:
       - ./drupal/profiles:/var/www/html/profiles
       # - ./drupal/sites:/var/www/html/sites
       - ./drupal/sites/default/files:/var/www/html/sites/default/files
-
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
     ports:
       - 2020:80
     depends_on:
