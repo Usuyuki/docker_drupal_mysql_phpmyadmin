@@ -1,0 +1,41 @@
+# @format
+
+version: "3"
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./db/mysql:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pass_tekitou
+      MYSQL_DATABASE: drupal_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user_pass_tekitou
+
+  drupal:
+    build: ./
+    volumes:
+      - ./drupal/themes:/var/www/html/themes
+      - ./drupal/modules:/var/www/html/modules
+      - ./drupal/sites:/var/www/html/sites
+      - ./config:/opt/drupal/config
+      - ./composer.json:/opt/drupal/composer.json
+      - ./composer.lock:/opt/drupal/composer.lock
+    environment:
+      PROFILE: "minimal"
+    ports:
+      - 2020:80
+    depends_on:
+      - mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    #コンテナの名前"phpmyadmin"
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 2222:80
+volumes:
+  data: {}
