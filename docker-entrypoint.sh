@@ -9,7 +9,7 @@ if [ ! -d "/tmp/check" ]; then
     -o /opt/drupal/web/sites/default/files/translations/drupal-${DRUPAL_VERSION}.ja.po
   sleep 30s && drush si -y ${PROFILE} \
     --account-name="admin" --account-pass="admin" --account-mail="test@example.com" \
-    --db-url="mysql://user:user_pass_tekitou@mysql:3306/drupal_db" \
+    --db-url="mysql://root:password@mysql:3306/drupal" \
     --site-mail="test@example.com" --site-name="Drupal Test" \
     --locale="ja"
   drush config-set system.site uuid e707291e-7532-46d1-822c-0983cb676f8d
