@@ -28,7 +28,7 @@ services:
     ports:
       - 2020:80
     depends_on:
-      - mysql
+      - db
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     #コンテナの名前"phpmyadmin"
