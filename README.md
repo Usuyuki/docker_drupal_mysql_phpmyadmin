@@ -7,10 +7,10 @@ Drupal と PHPMyAdmin が動く docker 雛形です。
 ## ローカルホスト
 
 ローカルホスト WordPress
-http://localhost:1010
+http://localhost:2020
 
 ローカルホスト PHPMyAdmin
-http://localhost:1111
+http://localhost:2222
 
 ## コマンド
 
@@ -43,3 +43,5 @@ docker-compose down
 かなり加筆修正して利用してます。
 
 https://pu10g.com/node/38
+https://qiita.com/nasuB7373/items/523f1392d87dffb5521d
+https://qiita.com/ShinKano/items/9a885473adda333ec375
