@@ -20,9 +20,7 @@ services:
       - ./web/themes:/var/www/html/themes
       - ./web/modules:/var/www/html/modules
       - ./web/sites:/var/www/html/sites
-      - ./config:/opt/drupal/config
-      - ./composer.json:/opt/drupal/composer.json
-      - ./composer.lock:/opt/drupal/composer.lock
+
     environment:
       PROFILE: "minimal"
     ports:
