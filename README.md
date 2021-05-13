@@ -6,7 +6,7 @@ Drupal と PHPMyAdmin が動く docker 雛形です。
 
 ## ローカルホスト
 
-ローカルホスト WordPress
+ローカルホスト Drupal
 http://localhost:2020
 
 ローカルホスト PHPMyAdmin
@@ -14,11 +14,17 @@ http://localhost:2222
 
 ## drupal の初期設定
 
+### データベースのセットアップ
+
 データベース名:drupal_db
 データベースのユーザー名:user
 データベースのパスワード:user_pass_tekitou
 ホスト :db
 ポート:3306
+
+### 他
+
+指示に従うだけ
 
 ## コマンド
 
