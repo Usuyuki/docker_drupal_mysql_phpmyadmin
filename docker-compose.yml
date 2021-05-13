@@ -24,7 +24,17 @@ services:
     environment:
       PROFILE: "minimal"
     ports:
+<<<<<<< HEAD
       - "80:80"
+=======
+      - 2020:80
+    depends_on:
+      - mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    #コンテナの名前"phpmyadmin"
+    restart: always
+>>>>>>> parent of fb05b40 (wip ミス修正)
     depends_on:
       - mysql
 
