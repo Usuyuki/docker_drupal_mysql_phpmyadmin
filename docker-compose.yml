@@ -21,7 +21,7 @@ services:
       - ./drupal/modules:/var/www/html/modules
       - ./drupal/profiles:/var/www/html/profiles
       # - ./drupal/sites:/var/www/html/sites
-      - ./drupal/sites/default/files:/var/www/html/sites/default/files
+      - ./drupal/sites:/var/www/html/sites
       - ./php.ini:/usr/local/etc/php/conf.d/php.ini
     ports:
       - 2020:80
@@ -31,7 +31,6 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    #コンテナの名前"phpmyadmin"
     restart: always
     depends_on:
       - db
